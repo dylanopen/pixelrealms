@@ -1,0 +1,13 @@
+[package]
+name = "pixelrealms_client"
+version = "0.1.0"
+description = "Executable for playing the Pixel Realms game [client]"
+license = "MIT"
+homepage = "https://github.com/dylanopen/pixelrealms"
+repository = "https://github.com/dylanopen/pixelrealms"
+readme = "README.md"
+edition = "2024"
+
+[dependencies]
+pixelrealms_graphics = { path = "../pixelrealms_graphics" }
+

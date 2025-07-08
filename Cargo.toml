@@ -1,4 +1,4 @@
 [workspace]
 resolver = "3"
-members = ["pixelrealms_color"]
+members = [ "pixelrealms_client","pixelrealms_color", "pixelrealms_graphics"]
 
