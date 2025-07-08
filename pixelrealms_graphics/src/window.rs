@@ -1,4 +1,5 @@
 pub struct Window {
+    pub running: bool,
     minifb_window: minifb::Window,
 }
 
@@ -8,8 +9,13 @@ impl Window {
             minifb::WindowOptions::default())?;
 
         Ok(Window {
-            minifb_window
+            minifb_window,
+            running: true,
         })
+    }
+
+    pub fn is_running(&self) -> bool {
+        self.running && self.minifb_window.is_open()
     }
 }
 
