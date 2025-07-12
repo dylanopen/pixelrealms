@@ -29,5 +29,18 @@ impl Texture {
         }
         buffer
     }
+
+    pub fn get(&self, x: usize, y: usize) -> Option<&Color> {
+        self.pixels.get(y * self.width + x)
+    }
+
+    pub fn get_mut(&mut self, x: usize, y: usize) -> Option<&mut Color> {
+        self.pixels.get_mut(y * self.width + x)
+    }
+
+    pub fn set(&mut self, x: usize, y: usize, color: Color) -> Option<()> {
+        *self.get_mut(x, y)? = color;
+        Some(())
+    }
 }
 
